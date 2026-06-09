@@ -15,12 +15,13 @@ Acting in a Data Engineering scenario, the main goal of this script is to extrac
 1. Clone this repository:
    ```bash
    git clone [https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git]
-2. Instale as dependências:
-   - pandas
-   - numpy
-   - lxml
-3. Execute o script:
-4. python ETL-project.py  
+2. Install the required dependencies:
+   ```bash
+   pip install pandas numpy lxml
+3. Run the script:
+   ```bash
+   python ETL-project.py
+  
 
 ## 📊 Expected Output
 When you run the script, it will generate a file named `Largest_economies.csv` and print the following table to your terminal:
