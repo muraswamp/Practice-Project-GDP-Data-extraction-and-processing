@@ -14,7 +14,7 @@ Acting in a Data Engineering scenario, the main goal of this script is to extrac
 
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git]
+   git clone https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git
 2. Install the required dependencies:
    ```bash
    pip install pandas numpy lxml
