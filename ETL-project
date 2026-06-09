@@ -1,0 +1,42 @@
+import pandas as pd
+import numpy as np
+
+# Ignorar avisos de execução
+import warnings
+warnings.filterwarnings('ignore')
+
+# 1. Extração (Extract)
+URL = "https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
+tabelas = pd.read_html(URL)
+
+# Isolar a tabela correta (índice 3) e preparar colunas
+df = tabelas[3]
+df.columns = range(df.shape[1])
+
+# Manter apenas as colunas de País (0) e PIB (2), e as 10 primeiras linhas
+df = df[[0,2]]
+df = df.iloc[1:11, :]
+
+# Renomear colunas iniciais
+df.columns = ['Country', 'GDP (Million USD)']
+
+# 2. Transformação (Transform)
+# Converter para número inteiro
+df['GDP (Million USD)'] = df['GDP (Million USD)'].astype(int)
+
+# Converter de Milhões para Biliões
+df[['GDP (Million USD)']] = df[['GDP (Million USD)']] / 1000
+
+# Arredondar para 2 casas decimais com NumPy
+df[['GDP (Million USD)']] = np.round(df[['GDP (Million USD)']], 2)
+
+# Atualizar o nome da coluna para refletir a conversão (usando inplace=True)
+df.rename(columns={'GDP (Million USD)': 'GDP (Billion USD)'}, inplace=True)
+
+# 3. Carga (Load)
+# Exportar o resultado final para um ficheiro CSV
+caminho_ficheiro = './Largest_economies.csv'
+df.to_csv(caminho_ficheiro, index=False)
+
+print(f"Processo ETL concluído! Os dados foram guardados em: {caminho_ficheiro}")
+print(df)
