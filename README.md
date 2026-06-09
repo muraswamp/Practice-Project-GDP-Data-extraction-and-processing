@@ -14,4 +14,19 @@ Acting in a Data Engineering scenario, the main goal of this script is to extrac
 
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git](https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git)
+   git clone [https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git]
+## 📊 Expected Output
+When you run the script, it will generate a file named `Largest_economies.csv` and print the following table to your terminal:
+
+```text
+           Country  GDP (Billion USD)
+1    United States           26854.60
+2            China           19373.59
+3            Japan            4409.74
+4          Germany            4308.85
+5            India            3736.88
+6   United Kingdom            3158.94
+7           France            2923.49
+8            Italy            2169.74
+9           Canada            2089.67
+10          Brazil            2081.24
