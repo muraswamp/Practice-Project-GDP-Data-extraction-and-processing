@@ -16,9 +16,9 @@ Acting in a Data Engineering scenario, the main goal of this script is to extrac
    ```bash
    git clone [https://github.com/muraswamp/Practice-Project-GDP-Data-extraction-and-processing.git]
 2. Instale as dependências:
-   pandas
-   numpy
-   lxml
+   - pandas
+   - numpy
+   - lxml
 3. Execute o script:
 4. python ETL-project.py  
 
